@@ -22,13 +22,16 @@ set number
 
 " show cursorline && cursorbind
 set cursorline
-set cursorbind
+" set cursorbind
 
 " tabs navigation
 nnoremap <F5> :tabprevious<CR>
 nnoremap <F6> :tabnext<CR>
 nnoremap <F7> :tabnew<CR>
 nnoremap <F8> :tabclose<CR>
+
+" close current buffer
+map <C-b> :bd!<CR>
 
 set autoindent
 set nocompatible
