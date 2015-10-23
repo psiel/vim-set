@@ -14,8 +14,9 @@ filetype plugin indent on
 set laststatus=2
 "let g:Powerline_symbols = 'fancy'
 
+set background=dark
 " default color theme
-colorscheme jellybeans
+colorscheme hybrid
 
 " number of rows at the left
 set number
@@ -24,6 +25,8 @@ set number
 set cursorline
 " set cursorbind
 
+map <C-e><C-e> :qa<CR>
+
 " tabs navigation
 nnoremap <F5> :tabprevious<CR>
 nnoremap <F6> :tabnext<CR>
@@ -31,7 +34,7 @@ nnoremap <F7> :tabnew<CR>
 nnoremap <F8> :tabclose<CR>
 
 " close current buffer
-map <C-b> :bd!<CR>
+map <C-b> :bd<CR>
 
 set autoindent
 set nocompatible
@@ -66,7 +69,7 @@ set nowrap
 set mouse=a
 
 """ S P E L L I N G
-set spelllang=en
+set spelllang=en,pl
 " set spell
 " spell toggle (as long as your not using CTRL+C to leave insert mode)
 " autocmd InsertEnter * setlocal spell
@@ -93,6 +96,8 @@ map <F3> <Esc>:DisablePHPFolds<Cr>
 let hlstate=0
 nnoremap <c-c> :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
 
+
+source ~/.vim/ftplugin/php_tab_wrapper.vim
 
 
 """ ext plugins settings
